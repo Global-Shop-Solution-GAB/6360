@@ -1,0 +1,581 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_Groups..Create(BaseForm)
+Gui.F_Groups..Caption("Document groups")
+Gui.F_Groups..Size(404,375)
+Gui.F_Groups..MinX(0)
+Gui.F_Groups..MinY(0)
+Gui.F_Groups..Position(0,0)
+Gui.F_Groups..AlwaysOnTop(False)
+Gui.F_Groups..FontName("Tahoma")
+Gui.F_Groups..FontSize(8.25)
+Gui.F_Groups..ControlBox(True)
+Gui.F_Groups..MaxButton(True)
+Gui.F_Groups..MinButton(True)
+Gui.F_Groups..MousePointer(0)
+Gui.F_Groups..Moveable(True)
+Gui.F_Groups..Sizeable(False)
+Gui.F_Groups..ShowInTaskBar(True)
+Gui.F_Groups..TitleBar(True)
+Gui.F_Groups..Event(UnLoad,F_Groups_UnLoad)
+Gui.F_Groups.GSGC_Groups.Create(GsGridControl)
+Gui.F_Groups.GSGC_Groups.Enabled(True)
+Gui.F_Groups.GSGC_Groups.Visible(True)
+Gui.F_Groups.GSGC_Groups.Zorder(0)
+Gui.F_Groups.GSGC_Groups.Size(392,306)
+Gui.F_Groups.GSGC_Groups.Position(7,9)
+Gui.F_Groups.cmdProcess.Create(Button)
+Gui.F_Groups.cmdProcess.Enabled(True)
+Gui.F_Groups.cmdProcess.Visible(True)
+Gui.F_Groups.cmdProcess.Zorder(0)
+Gui.F_Groups.cmdProcess.Size(75,23)
+Gui.F_Groups.cmdProcess.Position(323,318)
+Gui.F_Groups.cmdProcess.Caption("Process")
+Gui.F_Groups.cmdProcess.FontName("Tahoma")
+Gui.F_Groups.cmdProcess.FontSize(8.25)
+Gui.F_Groups.cmdProcess.Event(Click,cmdProcess_Click)
+Gui.F_Groups.cmdSelAllGroups.Create(Button)
+Gui.F_Groups.cmdSelAllGroups.Enabled(True)
+Gui.F_Groups.cmdSelAllGroups.Visible(True)
+Gui.F_Groups.cmdSelAllGroups.Zorder(0)
+Gui.F_Groups.cmdSelAllGroups.Size(75,23)
+Gui.F_Groups.cmdSelAllGroups.Position(8,318)
+Gui.F_Groups.cmdSelAllGroups.Caption("Select All")
+Gui.F_Groups.cmdSelAllGroups.FontName("Tahoma")
+Gui.F_Groups.cmdSelAllGroups.FontSize(8.25)
+Gui.F_Groups.cmdSelAllGroups.Event(Click,cmdSelAllGroups_Click)
+Gui.F_Groups.cmdDeselAllGroups.Create(Button)
+Gui.F_Groups.cmdDeselAllGroups.Enabled(True)
+Gui.F_Groups.cmdDeselAllGroups.Visible(True)
+Gui.F_Groups.cmdDeselAllGroups.Zorder(0)
+Gui.F_Groups.cmdDeselAllGroups.Size(75,23)
+Gui.F_Groups.cmdDeselAllGroups.Position(89,318)
+Gui.F_Groups.cmdDeselAllGroups.Caption("Deselect All")
+Gui.F_Groups.cmdDeselAllGroups.FontName("Tahoma")
+Gui.F_Groups.cmdDeselAllGroups.FontSize(8.25)
+Gui.F_Groups.cmdDeselAllGroups.Event(Click,cmdDeselAllGroups_Click)
+Gui.F_Docs..Create(BaseForm)
+Gui.F_Docs..Caption("Documents")
+Gui.F_Docs..Size(500,520)
+Gui.F_Docs..MinX(0)
+Gui.F_Docs..MinY(0)
+Gui.F_Docs..Position(0,0)
+Gui.F_Docs..AlwaysOnTop(False)
+Gui.F_Docs..FontName("Tahoma")
+Gui.F_Docs..FontSize(8.25)
+Gui.F_Docs..ControlBox(True)
+Gui.F_Docs..MaxButton(True)
+Gui.F_Docs..MinButton(True)
+Gui.F_Docs..MousePointer(0)
+Gui.F_Docs..Moveable(True)
+Gui.F_Docs..Sizeable(False)
+Gui.F_Docs..ShowInTaskBar(True)
+Gui.F_Docs..TitleBar(True)
+Gui.F_Docs..Event(UnLoad,F_Docs_UnLoad)
+Gui.F_Docs.GSGC_Docs.Create(GsGridControl)
+Gui.F_Docs.GSGC_Docs.Enabled(True)
+Gui.F_Docs.GSGC_Docs.Visible(True)
+Gui.F_Docs.GSGC_Docs.Zorder(0)
+Gui.F_Docs.GSGC_Docs.Size(492,455)
+Gui.F_Docs.GSGC_Docs.Position(4,6)
+Gui.F_Docs.GSGC_Docs.Anchor(15)
+Gui.F_Docs.cmdAttach.Create(Button)
+Gui.F_Docs.cmdAttach.Enabled(True)
+Gui.F_Docs.cmdAttach.Visible(True)
+Gui.F_Docs.cmdAttach.Zorder(0)
+Gui.F_Docs.cmdAttach.Size(75,23)
+Gui.F_Docs.cmdAttach.Position(419,464)
+Gui.F_Docs.cmdAttach.Caption("Attach")
+Gui.F_Docs.cmdAttach.FontName("Tahoma")
+Gui.F_Docs.cmdAttach.FontSize(8.25)
+Gui.F_Docs.cmdAttach.Event(Click,cmdAttach_Click)
+Gui.F_Docs.cmdSelAll.Create(Button)
+Gui.F_Docs.cmdSelAll.Enabled(True)
+Gui.F_Docs.cmdSelAll.Visible(True)
+Gui.F_Docs.cmdSelAll.Zorder(0)
+Gui.F_Docs.cmdSelAll.Size(75,23)
+Gui.F_Docs.cmdSelAll.Position(3,464)
+Gui.F_Docs.cmdSelAll.Caption("Select All")
+Gui.F_Docs.cmdSelAll.FontName("Tahoma")
+Gui.F_Docs.cmdSelAll.FontSize(8.25)
+Gui.F_Docs.cmdSelAll.Event(Click,cmdSelAll_Click)
+Gui.F_Docs.cmdDeSelAll.Create(Button)
+Gui.F_Docs.cmdDeSelAll.Enabled(True)
+Gui.F_Docs.cmdDeSelAll.Visible(True)
+Gui.F_Docs.cmdDeSelAll.Zorder(0)
+Gui.F_Docs.cmdDeSelAll.Size(75,23)
+Gui.F_Docs.cmdDeSelAll.Position(96,464)
+Gui.F_Docs.cmdDeSelAll.Caption("Deselect All")
+Gui.F_Docs.cmdDeSelAll.FontName("Tahoma")
+Gui.F_Docs.cmdDeSelAll.FontSize(8.25)
+Gui.F_Docs.cmdDeSelAll.Event(Click,cmdDeSelAll_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sWO.Declare
+v.Global.sSuf.Declare
+v.Global.sDir.Declare
+v.Global.sBarcodeWO.Declare
+v.Global.sPickList.Declare
+v.Global.sPart.Declare
+V.Global.bOut.Declare
+V.Global.bMatl.Declare
+v.Global.sPath.Declare
+v.Global.iQtyOrd.Declare
+Program.Sub.Preflight.End
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+'Bryan Pham
+'05/21/2021
+'Customer: Werk Brau
+'Description: merge barcode WO, matl pick list and all associated documents of FG parts to top level WO.
+
+F.Intrinsic.Control.Try
+v.Local.sError.Declare
+
+v.Local.sSO.Declare
+v.Local.sSL.Declare
+v.Local.sSQL.Declare
+v.Local.sRet.Declare
+v.Local.sFile.Declare
+v.Local.sParams.Declare
+V.Local.sParamName.Declare
+V.Local.sParamVal.Declare
+V.Local.sPN.Declare
+V.Local.sPV.Declare
+v.Local.iBIRunId.Declare
+v.Local.iLogID.Declare
+V.Local.iRet.Declare
+V.Local.iRptId.Declare
+v.Local.sPartLoc.Declare
+v.Local.sDay.Declare
+v.Local.sMonth.Declare
+v.Local.sDay.Set(v.Ambient.Date.Day)
+v.Local.sMonth.Set(v.Ambient.Date.Month)
+v.Local.sLogo.Declare
+
+f.Intrinsic.String.Build("{0}\WerkBrauGSSLogo.png",v.Caller.GlobalDir,v.Local.sLogo)
+f.Intrinsic.Control.CallSub(Read_Options)
+f.Intrinsic.Control.CallSub(checkFolder)
+f.Intrinsic.String.Build("\\wb-filesvr\wb2\ENG 3-WB\ORDERS TO PROCESS\ORDERS NEEDING PRINTED\{0}-{1}",v.Local.sMonth,v.Local.sDay,v.Global.sPath)
+
+f.ODBC.Connection!con.OpenCompanyConnection
+
+f.Intrinsic.Control.If(v.Caller.Hook,=,12010)
+	v.Passed.000141.Set("Att. PDF to WO")
+f.Intrinsic.Control.EndIf
+
+'post process hook
+f.Intrinsic.Control.If(v.Caller.Hook,=,17261)
+	v.Global.sWO.Set(v.Passed.009000)
+	v.Global.sSuf.Set(v.Passed.009001)
+'if it is the top level WO
+	f.Intrinsic.Control.If(v.Global.sSuf,=,"000")
+	'save the WO number to registry
+		f.Global.Registry.AddValue(v.Caller.User,v.Caller.CompanyCode,"WO_PDF",6360,1111,False,v.Global.sWO,False, 0, 0, 1/1/1900, 12:00:00 AM)
+
+		f.Intrinsic.String.Build("{0}\WO_{1}-{2}.pdf",v.Global.sDir,v.Global.sWO,v.Global.sSuf,v.Global.sBarcodeWO)
+		f.Intrinsic.String.Build("{0}\PickList_{1}-{2}{3}",v.Global.sDir,v.Global.sWO,v.Global.sSuf,".pdf",v.Global.sPickList)
+		
+	'save matl pick list
+		F.Intrinsic.String.Build("{0}!*!{1}!*!{0}!*!{1}",V.Global.sWO,V.Global.sSuf,V.Local.sParams)
+		F.Global.General.CallWrapperSyncBIO(900200,V.Local.sParams)
+		V.Local.sPN.Set("Terminal*!*NEWPAGE")
+		F.Intrinsic.String.Concat(V.caller.Terminal,"*!*","",V.Local.sPV)
+		F.Intrinsic.String.Split(V.Local.sPN,"*!*",V.Local.sParamName)
+		F.Intrinsic.String.Split(V.Local.sPV,"*!*",V.Local.sParamVal)
+		F.Global.BI.SaveReport(1801,1,V.Local.sParamName,V.Local.sParamVal,v.Global.sPickList)
+
+	f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.EndIf
+
+'script 2 button
+f.Intrinsic.Control.If(v.Caller.Hook,=,12420)
+
+
+	v.Global.iQtyOrd.Set(v.Passed.000007)
+'get WO number frm registry 
+	f.Global.Registry.ReadValue(v.Caller.User,v.Caller.CompanyCode,"WO_PDF",6360,1111,5,"",v.Global.sWO)
+	f.Intrinsic.String.Build("{0}\WO_{1}-{2}.pdf",v.Global.sDir,v.Global.sWO,"000",v.Global.sBarcodeWO)
+	f.Intrinsic.String.Build("{0}\PickList_{1}-{2}{3}",v.Global.sDir,v.Global.sWO,"000",".pdf",v.Global.sPickList)
+	'====09/15/2021==================
+	'save barcode WO	
+		'f.Intrinsic.String.Build("{0}!*!{1}!*!1811",V.Global.sWO,V.Global.sSuf,V.Local.sParams)
+		'F.Global.General.CallWrapperSyncBIO(900100,V.Local.sParams)
+		V.Local.sPN.Set("Terminal*!*MATLBAR*!*OUTBAR*!*REPORTID*!*LOGO")
+		
+		F.Intrinsic.String.Concat(V.caller.Terminal,"*!*","","*!*","","*!*","001811","*!*",v.Local.sLogo,V.Local.sPV)
+		F.Intrinsic.String.Split(V.Local.sPN,"*!*",V.Local.sParamName)
+		F.Intrinsic.String.Split(V.Local.sPV,"*!*",V.Local.sParamVal)		
+		F.Global.BI.SaveReport(1811,1,V.Local.sParamName,V.Local.sParamVal,v.Global.sBarcodeWO)
+	'=================================
+
+'get all FG part of WOs (parent and sub assy)
+	f.Intrinsic.String.Build("Select RTRIM(PART) + RTRIM(LOCATION) as PARTLOC from V_JOB_HEADER where JOB = '{0}';",v.Global.sWO,v.Local.sSQL)
+	f.Data.Datatable.CreateFromSQL("dtParts","con",v.Local.sSQL,true)
+
+'display all document groups 
+	f.Data.Datatable.CreateFromSQL("dtGroups","con","Select cast(1 as bit) as SelectRow, RTRIM(GRP_ID) as GRP_ID,RTRIm(GRP_NAME) as GRP_NAME, RTRIM(GRP_DESC) as GRP_DESC from ATG_DOC_GRP where GRP_NAME <> ''",true)
+		
+		Gui.F_Groups.GSGC_Groups.SuspendLayout()
+		gui.F_Groups.GSGC_Groups.AddGridviewFromDatatable("gvGroups","dtGroups")
+		
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_ID","Visible","False")
+		
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","SelectRow","Caption","Select")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_NAME","Caption","Group Name")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_DESC","Caption","Description")
+		
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","SelectRow","MinWidth","50")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_NAME","MinWidth","100")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_DESC","MinWidth","150")
+		
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","SelectRow","Caption","Select")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_NAME","Caption","Group Name")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_DESC","Caption","Description")
+		
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","SelectRow","AllowEdit","True")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_NAME","AllowEdit","False")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_DESC","AllowEdit","False")
+		
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","SelectRow","ReadOnly","False")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_NAME","ReadOnly","True")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_DESC","ReadOnly","True")
+		
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","SelectRow","HeaderHAlignment","Center")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_NAME","HeaderHAlignment","Center")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_DESC","HeaderHAlignment","Center")
+		
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","SelectRow","HeaderFontBold","True")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_NAME","HeaderFontBold","True")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_DESC","HeaderFontBold","True")
+		
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","SelectRow","CellHAlignment","Center")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_NAME","CellHAlignment","Center")
+		Gui.F_Groups.GSGC_Groups.SetColumnProperty("gvGroups","GRP_DESC","CellHAlignment","Left")
+		
+		Gui.F_Groups.GSGC_Groups.ResumeLayout()	
+		Gui.F_Groups.GSGC_Groups.MainView("gvGroups")
+		gui.F_Groups..Show
+	
+	
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.F_Docs_UnLoad.Start
+F.Intrinsic.Control.Try
+v.Local.sError.Declare
+gui.F_Docs..Visible(False)
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.F_Docs_UnLoad.End
+
+Program.Sub.F_Groups_UnLoad.Start
+F.Intrinsic.Control.Try
+v.Local.sError.Declare
+gui.F_Groups..Visible(False)
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.F_Groups_UnLoad.End
+
+Program.Sub.cmdProcess_Click.Start
+F.Intrinsic.Control.Try
+v.Local.sError.Declare
+V.Local.sSelect.Declare
+v.Local.iCnt.Declare
+V.Local.sJobSuffix.Declare
+V.Local.sLinkID.Declare
+V.Local.sSql.Declare
+v.Local.sGroupID.Declare
+v.Local.iSelect.Declare
+v.Local.sRet.Declare
+v.Local.sDocs.Declare
+v.Local.sFile.Declare
+v.Local.iLinkID.Declare
+v.Local.sCheckSheet.Declare
+'get all selected rows of document groups
+F.Data.DataTable.Select("dtGroups","SelectRow = True",V.Local.sSelect)
+F.Data.DataTable.AcceptChanges("dtGroups")
+'loop thru selected group and concatenate group IDs to a filter
+F.Intrinsic.Control.If(V.Local.sSelect,<>,"***NORETURN***")
+	F.Intrinsic.String.Split(V.Local.sSelect,"*!*",V.Local.sSelect)
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sSelect.UBound,1)
+		v.Local.iSelect.Set(V.Local.sSelect(V.Local.iCnt))
+		f.Intrinsic.Control.If(v.Local.iCnt,=,0)
+			f.Intrinsic.String.Build("'{0}'",v.DataTable.dtGroups(v.Local.iSelect).GRP_ID!FieldValTrim,v.Local.sGroupID)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Build("{0},'{1}'",v.Local.sGroupID,v.DataTable.dtGroups(v.Local.iSelect).GRP_ID!FieldValTrim,v.Local.sGroupID)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+f.Intrinsic.Control.Else
+	f.Intrinsic.UI.Msgbox("Please select at least 1 group to process.","Attention")
+F.Intrinsic.Control.EndIf
+
+'get all link IDs
+f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.dtParts.RowCount--,1)
+	f.Intrinsic.String.Build("Select LINK_ID from V_LINK_DATA where TYPE = '00030' and ID = '{0}';",v.DataTable.dtParts(v.Local.iCnt).PARTLOC!FieldValTrim,v.Local.sSql)
+	f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSql,v.Local.sRet)
+	f.Intrinsic.Control.If(v.Local.iCnt,=,0)
+		V.Local.sLinkID.Set(v.Local.sRet)
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build("{0}#$#{1}",v.Local.sLinkID,v.Local.sRet,v.Local.sLinkID)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Next(v.local.iCnt)
+
+f.Intrinsic.String.Replace(v.Local.sLinkID,"#$#","','",v.Local.sLinkID)
+f.Intrinsic.String.Build("'{0}'",v.Local.sLinkID,v.Local.sLinkID)
+
+'get all documents
+F.Intrinsic.String.Build("Select cast(1 as bit) as SelectRow,File_Num, File, Description,Path From ATG_Doc_Assoc Where Link_ID in ({0}) and GRP_ID in ({1})",V.Local.sLinkID,v.Local.sGroupID,V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("dtDoc","con",v.Local.sSql,true)
+
+f.Intrinsic.Control.If(v.DataTable.dtDoc.RowCount,<,1)
+	f.Intrinsic.String.Build("\\wb-filesvr\wb2\ENG 3-WB\ORDERS TO PROCESS\ORDERS NEEDING PRINTED\{0}","Check Sheet WB.pdf",v.Local.sCheckSheet)
+	f.Intrinsic.UI.Msgbox("There is no document associated with FG parts on the Work Order. Only Material Pick List and barcode WO will be attached to WO.","Attention")
+	f.Intrinsic.Control.For(v.Local.iCnt,1,v.Global.iQtyOrd,1)
+		f.Intrinsic.Control.If(v.Local.iCnt,=,1)
+			f.Intrinsic.String.Build("{0}*!*{1}",v.Global.sBarcodeWO,v.Local.sCheckSheet,v.Local.sDocs)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Build("{0}*!*{1}*!*{2}",v.Local.sDocs,v.Global.sBarcodeWO,v.Local.sCheckSheet,v.Local.sDocs)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	F.Intrinsic.UI.ShowSaveFileDialog("","pdf|*.pdf",V.Local.sFile)
+	
+	f.Automation.PDF.Merge(v.Local.sDocs,v.Local.sFile)
+	F.Intrinsic.String.Build("{0}{1}",V.Global.sWO,V.Global.sSuf,V.Local.sJobSuffix)
+	F.Global.DocumentControl.CreateReference(V.Local.sJobSuffix,20,v.Local.iLinkID)
+	F.Global.DocumentControl.AddDocument(v.Local.iLinkID,v.Local.sFile,"All documnents for WO",-1,"PDF")
+	f.Intrinsic.UI.Msgbox("Documents are successfully attached to Work Order.","Notification")
+	f.Intrinsic.Control.CallSub(Unload)
+f.Intrinsic.Control.Else
+	'display all document groups 
+	
+	gui.F_Docs.GSGC_Docs.AddGridviewFromDatatable("gvDocss","dtDoc")
+	
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","File_Num","Visible","False")
+	
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","SelectRow","Caption","Select")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","File","Caption","File name")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Description","Caption","Description")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Path","Caption","Path")
+	
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","SelectRow","MinWidth","50")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","File","MinWidth","50")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Description","MinWidth","100")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Path","MinWidth","100")
+	
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","SelectRow","Caption","Select")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","File","Caption","File")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Description","Caption","Group Name")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Path","Caption","Description")
+	
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","SelectRow","AllowEdit","True")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","File","AllowEdit","False")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Description","AllowEdit","False")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Path","AllowEdit","False")
+	
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","SelectRow","ReadOnly","False")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","File","ReadOnly","True")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Description","ReadOnly","True")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Path","ReadOnly","True")
+	
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","SelectRow","HeaderHAlignment","Center")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","File","HeaderHAlignment","Center")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Description","HeaderHAlignment","Center")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Path","HeaderHAlignment","Center")
+	
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","SelectRow","HeaderFontBold","True")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","File","HeaderFontBold","True")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Description","HeaderFontBold","True")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Path","HeaderFontBold","True")
+	
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","SelectRow","CellHAlignment","Center")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","File","CellHAlignment","Left")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Description","CellHAlignment","Left")
+	Gui.F_Docs.GSGC_Docs.SetColumnProperty("gvDocss","Path","CellHAlignment","Left")
+
+	Gui.F_Docs.GSGC_Docs.MainView("gvDocss")
+	gui.F_Groups..Visible(False)
+	gui.F_Docs..Show
+f.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdProcess_Click.End
+
+Program.Sub.cmdAttach_Click.Start
+F.Intrinsic.Control.Try
+v.Local.sError.Declare
+v.Local.sDocs.Declare
+V.Local.sSelect.Declare
+v.Local.iCnt.Declare
+v.Local.iSelect.Declare
+v.Local.sFile.Declare
+V.Local.sJobSuffix.Declare
+v.Local.iLinkID.Declare
+v.Local.sCheckSheet.Declare
+v.Local.bExist.Declare
+f.Intrinsic.String.Build("\\wb-filesvr\wb2\ENG 3-WB\ORDERS TO PROCESS\ORDERS NEEDING PRINTED\{0}","Check Sheet WB.pdf",v.Local.sCheckSheet)
+f.Intrinsic.File.Exists(v.Local.sCheckSheet,v.Local.bExist)
+
+f.Intrinsic.Control.For(v.Local.iCnt,1,v.Global.iQtyOrd,1)
+	f.Intrinsic.Control.If(v.Local.iCnt,=,1)
+		f.Intrinsic.Control.If(v.Local.bExist)
+			f.Intrinsic.String.Build("{0}*!*{1}",v.Global.sBarcodeWO,v.Local.sCheckSheet,v.Local.sDocs)
+		f.Intrinsic.Control.Else
+			v.Local.sDocs.Set(v.Global.sBarcodeWO)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Else
+		f.Intrinsic.Control.If(v.Local.bExist)
+			f.Intrinsic.String.Build("{0}*!*{1}*!*{2}",v.Local.sDocs,v.Global.sBarcodeWO,v.Local.sCheckSheet,v.Local.sDocs)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Build("{0}*!*{1}",v.Local.sDocs,v.Global.sBarcodeWO,v.Local.sDocs)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Next(v.Local.iCnt)
+
+f.Intrinsic.String.Build("{0}*!*{1}",v.Local.sDocs,v.Global.sPickList,v.Local.sDocs)
+
+F.Data.DataTable.Select("dtDoc","SelectRow = True",V.Local.sSelect)
+F.Data.DataTable.AcceptChanges("dtDoc")
+'get all documents and merge with matl pick list and barcode WO
+F.Intrinsic.Control.If(V.Local.sSelect,<>,"***NORETURN***")
+	F.Intrinsic.String.Split(V.Local.sSelect,"*!*",V.Local.sSelect)
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sSelect.UBound,1)
+		v.Local.iSelect.Set(V.Local.sSelect(V.Local.iCnt))
+		f.Intrinsic.String.Build("{0}{1}",v.DataTable.dtDoc(v.Local.iSelect).PATH!FieldValTrim,v.DataTable.dtDoc(v.Local.iSelect).FILE!FieldValTrim,v.Local.sFile)
+		f.Intrinsic.String.Build("{0}*!*{1}",v.Local.sDocs,v.Local.sFile,v.Local.sDocs)
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+f.Intrinsic.Control.Else
+	f.Intrinsic.UI.Msgbox("Please select at least 1 document to process.","Attention")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.ShowSaveFileDialog("","pdf|*.pdf",V.Local.sFile)
+
+f.Automation.PDF.Merge(v.Local.sDocs,v.Local.sFile)
+
+'build WO key for link
+F.Intrinsic.String.Build("{0}{1}",V.Global.sWO,"000",V.Local.sJobSuffix)
+'add documents to WO
+F.Global.DocumentControl.CreateReference(V.Local.sJobSuffix,20,v.Local.iLinkID)
+F.Global.DocumentControl.AddDocument(v.Local.iLinkID,v.Local.sFile,"All documnents for WO",-1,"PDF")
+f.Intrinsic.UI.Msgbox("Documents are successfully attached to Work Order.","Notification")
+
+f.Intrinsic.Control.CallSub(Unload)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdAttach_Click.End
+
+Program.Sub.Unload.Start
+f.Intrinsic.Control.Try
+	v.Local.sError.Declare
+	
+	F.Intrinsic.Control.If(V.ODBC.con.State,=,1)
+		F.ODBC.Connection!con.close
+	F.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.End
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.Unload.End
+
+Program.Sub.cmdDeSelAll_Click.Start
+f.Data.Datatable.SetValue("dtDoc",-1,"SelectRow",False)
+Program.Sub.cmdDeSelAll_Click.End
+
+Program.Sub.cmdSelAll_Click.Start
+f.Data.Datatable.SetValue("dtDoc",-1,"SelectRow",True)
+
+Program.Sub.cmdSelAll_Click.End
+
+Program.Sub.checkFolder.Start
+f.Intrinsic.Control.Try
+v.Local.sError.Declare
+v.Local.sCustomDir.Declare
+v.Local.bEx.Declare
+v.Local.sProjectFolder.Declare
+v.Local.sYear.Declare
+v.Local.sMonth.Declare
+v.Local.sYear.Set(v.Ambient.Date.Year)
+v.Local.sMonth.Set(v.Ambient.Date.Month)
+
+'Check Custom folder
+f.Intrinsic.String.Build("{0}\Custom",V.Caller.GlobalDir,v.Local.sCustomDir)
+f.Intrinsic.File.DirExists(v.Local.sCustomDir,v.Local.bEx)
+f.Intrinsic.Control.If(v.Local.bEx.Not)
+	f.Intrinsic.File.CreateDir(v.Local.sCustomDir)
+f.Intrinsic.Control.EndIf
+
+'Check Project folder
+f.Intrinsic.String.Build("{0}\Custom\6360",V.Caller.GlobalDir,v.Local.sProjectFolder)
+f.Intrinsic.File.DirExists(v.Local.sProjectFolder,v.Local.bEx)
+f.Intrinsic.Control.If(v.Local.bEx.Not)
+	f.Intrinsic.File.CreateDir(v.Local.sProjectFolder)
+f.Intrinsic.Control.EndIf
+
+'Check year folder
+f.Intrinsic.String.Build("{0}\Custom\6360\{1}",V.Caller.GlobalDir,v.Local.sYear,v.Global.sDir)
+f.Intrinsic.File.DirExists(v.Global.sDir,v.Local.bEx)
+f.Intrinsic.Control.If(v.Local.bEx.Not)
+	f.Intrinsic.File.CreateDir(v.Global.sDir)
+f.Intrinsic.Control.EndIf
+
+'Check month folder
+f.Intrinsic.String.Build("{0}\Custom\6360\{1}\{2}",V.Caller.GlobalDir,v.Local.sYear,v.Local.sMonth,v.Global.sDir)
+f.Intrinsic.File.DirExists(v.Global.sDir,v.Local.bEx)
+f.Intrinsic.Control.If(v.Local.bEx.Not)
+	f.Intrinsic.File.CreateDir(v.Global.sDir)
+f.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.checkFolder.End
+
+Program.Sub.Read_Options.Start
+F.Global.General.ReadOption("400725",0,False,V.Global.bMatl)
+F.Global.General.ReadOption("400727",0,False,V.Global.bOut)
+Program.Sub.Read_Options.End
+Program.Sub.cmdDeselAllGroups_Click.Start
+f.Data.Datatable.SetValue("dtGroups",-1,"SelectRow",False)
+
+Program.Sub.cmdDeselAllGroups_Click.End
+
+Program.Sub.cmdSelAllGroups_Click.Start
+f.Data.Datatable.SetValue("dtGroups",-1,"SelectRow",True)
+
+Program.Sub.cmdSelAllGroups_Click.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$bpham$}$20210915115314693$}$Di0riF4Q5RIv6jxva5zSWDOOsXP37Nso2JKQjhcT0x8e0gi+0FLfDhT7kRi9pWn7hiD+qeu5N4A=
+Program.Sub.Comments.End
